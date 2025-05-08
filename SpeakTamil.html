@@ -1,51 +1,45 @@
 <!DOCTYPE html>
-<html lang="kn">
+<html lang="ta">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speak Kannada – Bhasha AI GPT</title>
+  <title>Speak Tamil – Bhasha AI GPT</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #111827;
-      --accent: #0ea5e9;
-      --bg: #f9fafb;
+      --primary: #1e293b;
+      --accent: #9333ea;
+      --bg: #f9f5ff;
       --text: #1f2937;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       transition: background 0.3s ease, color 0.3s ease;
     }
-
     header {
-      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      background: linear-gradient(135deg, #6b21a8, #9333ea);
       color: white;
       padding: 2.5rem 1rem;
       text-align: center;
     }
-
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.6rem;
       animation: fadeIn 1s ease-in-out;
     }
-
     .container {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1.5rem;
       text-align: center;
     }
-
     .icon {
       display: inline-flex;
       width: 80px;
@@ -60,14 +54,12 @@
       margin-bottom: 1rem;
       animation: popIn 0.8s ease forwards;
     }
-
     .description {
       font-size: 1.1rem;
       margin: 1rem 0 2rem;
       color: #374151;
       animation: fadeIn 1s ease-in-out 0.2s;
     }
-
     .buttons {
       display: flex;
       flex-direction: column;
@@ -76,7 +68,6 @@
       margin-bottom: 2.5rem;
       animation: fadeInUp 1s ease-in-out 0.3s;
     }
-
     .buttons a {
       padding: 0.75rem 1.6rem;
       background-color: var(--accent);
@@ -87,12 +78,20 @@
       transition: transform 0.2s ease, background 0.3s ease;
       min-width: 220px;
     }
-
     .buttons a:hover {
-      background-color: #0284c7;
+      background-color: #7e22ce;
       transform: translateY(-3px);
     }
-
+    .back-home {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+    .back-home:hover {
+      text-decoration: underline;
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -100,17 +99,14 @@
       color: #6b7280;
       margin-top: 3rem;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes popIn {
       0% { transform: scale(0.6); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
@@ -119,20 +115,22 @@
 </head>
 <body>
   <header>
-    <h1>Speak Kannada GPT</h1>
+    <h1>Speak Tamil GPT</h1>
   </header>
 
   <div class="container">
-    <div class="icon">ಕ</div>
+    <div class="icon">த</div>
     <p class="description">
-      Learn to speak Kannada confidently with the help of AI. Ask questions, get local phrases, pronunciations, and conversational support — perfect for living or working in Karnataka.
+      Speak Tamil naturally with AI support. Learn everyday expressions, sentence structure, and pronunciation whether you're visiting Tamil Nadu or speaking with Tamil friends.
     </p>
 
     <div class="buttons">
       <a href="https://chatgpt.com/g/g-674096ffdf248191b897eeba933b4887-speak-tamil" target="_blank">🙏 Try GPT Now</a>
-      <a href="https://wa.me/?text=Try%20Speak%20Kannada%20GPT%20here%3A%20https%3A%2F%2Fbhasha.superai.cool%2FSpeakKannada.html" target="_blank">📤 Share GPT</a>
+      <a href="https://wa.me/?text=Try%20Speak%20Tamil%20GPT%20here%3A%20https%3A%2F%2Fbhasha.superai.cool%2FSpeakTamil.html" target="_blank">📤 Share GPT</a>
       <a href="https://your-contribution-link.com" target="_blank">❤️ Contribute Now</a>
     </div>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
   </div>
 
   <footer>

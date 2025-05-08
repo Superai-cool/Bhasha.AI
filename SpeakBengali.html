@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speak Bengali – Bhasha AI GPT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #111827;
+      --accent: #db2777;
+      --bg: #fdf4ff;
+      --text: #1f2937;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      background: linear-gradient(135deg, #831843, #db2777);
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .icon {
+      display: inline-flex;
+      width: 80px;
+      height: 80px;
+      background-color: var(--accent);
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      animation: popIn 0.8s ease forwards;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      margin: 1rem 0 2rem;
+      color: #374151;
+      animation: fadeIn 1s ease-in-out 0.2s;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 1s ease-in-out 0.3s;
+    }
+
+    .buttons a {
+      padding: 0.75rem 1.6rem;
+      background-color: var(--accent);
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.3s ease;
+      min-width: 220px;
+    }
+
+    .buttons a:hover {
+      background-color: #be185d;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Speak Bengali GPT</h1>
+  </header>
+
+  <div class="container">
+    <div class="icon">ব</div>
+    <p class="description">
+      Practice Bengali conversations with this AI-powered GPT. Learn phrases, grammar, pronunciation, and useful expressions for life in Bengal or among Bengali speakers.
+    </p>
+
+    <div class="buttons">
+      <a href="https://your-gpt-link.com/speakbengali" target="_blank">🙏 Try GPT Now</a>
+      <a href="https://wa.me/?text=Try%20Speak%20Bengali%20GPT%20here%3A%20https%3A%2F%2Fbhasha.superai.cool%2FSpeakBengali.html" target="_blank">📤 Share GPT</a>
+      <a href="https://your-contribution-link.com" target="_blank">❤️ Contribute Now</a>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ and developed by Super AI Labs<br />
+    © 2025 Bhasha AI. Empowering Bharat with local language learning.
+  </footer>
+</body>
+</html>

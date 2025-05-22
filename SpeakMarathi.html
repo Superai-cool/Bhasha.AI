@@ -74,21 +74,20 @@
       animation: fadeIn 1s ease-in-out 0.2s;
     }
 
-    .buttons-wrapper {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
       margin-bottom: 2.5rem;
     }
 
-    .buttons {
-      display: inline-flex;
-      gap: 1rem;
-      padding-bottom: 1rem;
-      min-width: max-content;
-    }
-
-    .buttons a {
-      padding: 0.75rem 1.6rem;
+    .buttons .btn {
+      flex: 1 1 140px;
+      max-width: 220px;
+      min-width: 120px;
+      text-align: center;
+      padding: 0.75rem 1.2rem;
       background-color: var(--accent);
       color: white;
       font-weight: bold;
@@ -98,9 +97,16 @@
       white-space: nowrap;
     }
 
-    .buttons a:hover {
+    .buttons .btn:hover {
       background-color: #d97706;
       transform: translateY(-3px);
+    }
+
+    @media (max-width: 500px) {
+      .buttons .contribute {
+        flex: 1 1 100%;
+        max-width: none;
+      }
     }
 
     .back-home {
@@ -205,13 +211,11 @@
       Speak Marathi confidently using this AI-powered GPT. Perfect for beginners, professionals, and travelers. Learn grammar, sentence formation, pronunciation and local expressions with ease.
     </p>
 
-    <!-- Horizontal Scrollable Buttons -->
-    <div class="buttons-wrapper">
-      <div class="buttons">
-        <a href="https://chatgpt.com/g/g-6740891b1c9c81919d82b2928e901010-speak-marathi" target="_blank">🙏 Try GPT Now</a>
-        <a href="https://wa.me/?text=Try%20Speak%20Marathi%20GPT%20here%3A%20https%3A%2F%2Fbhasha.superai.cool%2FSpeakMarathi.html" target="_blank">📤 Share GPT</a>
-        <a href="https://payments.cashfree.com/forms/supportbhashaai" target="_blank">❤️ Contribute Now</a>
-      </div>
+    <!-- Responsive Buttons -->
+    <div class="buttons">
+      <a href="https://chatgpt.com/g/g-6740891b1c9c81919d82b2928e901010-speak-marathi" target="_blank" class="btn">🙏 Try GPT Now</a>
+      <a href="https://wa.me/?text=Try%20Speak%20Marathi%20GPT%20here%3A%20https%3A%2F%2Fbhasha.superai.cool%2FSpeakMarathi.html" target="_blank" class="btn">📤 Share GPT</a>
+      <a href="https://payments.cashfree.com/forms/supportbhashaai" target="_blank" class="btn contribute">❤️ Contribute Now</a>
     </div>
 
     <a href="index.html" class="back-home">← Back to Home</a>
@@ -221,56 +225,16 @@
   <section class="sponsors">
     <h2>🌟 Our Supporters</h2>
     <div class="sponsor-grid">
-      <div class="sponsor-card">
-        <h3>MarathiTech</h3>
-        <p>Promoting tech awareness in Marathi communities.</p>
-        <a href="https://marathitech.in" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>Sanskriti Foundation</h3>
-        <p>Empowering regional language education in schools.</p>
-        <a href="https://sanskritifoundation.org" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>Local AI Hub</h3>
-        <p>Accelerating Indian language GPT adoption for all.</p>
-        <a href="https://localaithub.org" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>Vidya Vikas Trust</h3>
-        <p>Helping rural youth access AI-based learning tools.</p>
-        <a href="https://vidyavikastrust.org" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>Digital Bharat Labs</h3>
-        <p>Driving digital literacy for Bharat in local tongues.</p>
-        <a href="https://digitalbharatlabs.in" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>BhashaRoots</h3>
-        <p>Preserving and nurturing regional languages with tech.</p>
-        <a href="https://bhasharoots.org" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>Maharashtra AI Forum</h3>
-        <p>Advancing AI research and training in Marathi.</p>
-        <a href="https://maharashtraai.org" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>LokBhasha Collective</h3>
-        <p>Encouraging open-source projects in Indian languages.</p>
-        <a href="https://lokbhasha.org" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>Learn Marathi App</h3>
-        <p>A leading app for structured Marathi learning online.</p>
-        <a href="https://learnmarathi.app" target="_blank">Visit Website →</a>
-      </div>
-      <div class="sponsor-card">
-        <h3>Unity EdTech</h3>
-        <p>Supporting AI-powered tools for regional learners.</p>
-        <a href="https://unityedtech.in" target="_blank">Visit Website →</a>
-      </div>
+      <div class="sponsor-card"><h3>MarathiTech</h3><p>Promoting tech awareness in Marathi communities.</p><a href="https://marathitech.in" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Sanskriti Foundation</h3><p>Empowering regional language education in schools.</p><a href="https://sanskritifoundation.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Local AI Hub</h3><p>Accelerating Indian language GPT adoption for all.</p><a href="https://localaithub.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Vidya Vikas Trust</h3><p>Helping rural youth access AI-based learning tools.</p><a href="https://vidyavikastrust.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Digital Bharat Labs</h3><p>Driving digital literacy for Bharat in local tongues.</p><a href="https://digitalbharatlabs.in" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>BhashaRoots</h3><p>Preserving and nurturing regional languages with tech.</p><a href="https://bhasharoots.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Maharashtra AI Forum</h3><p>Advancing AI research and training in Marathi.</p><a href="https://maharashtraai.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>LokBhasha Collective</h3><p>Encouraging open-source projects in Indian languages.</p><a href="https://lokbhasha.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Learn Marathi App</h3><p>A leading app for structured Marathi learning online.</p><a href="https://learnmarathi.app" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Unity EdTech</h3><p>Supporting AI-powered tools for regional learners.</p><a href="https://unityedtech.in" target="_blank">Visit Website →</a></div>
     </div>
   </section>
 

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Speak Konkani – Bhasha AI GPT</title>
+  <link rel="icon" type="image/png" href="https://bhasha.superai.cool/assets/favicon-kok.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -12,34 +13,34 @@
       --bg: #f0fdf4;
       --text: #1f2937;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      transition: background 0.3s ease, color 0.3s ease;
     }
+
     header {
       background: linear-gradient(135deg, #166534, #22c55e);
       color: white;
       padding: 2.5rem 1rem;
       text-align: center;
     }
+
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.6rem;
-      animation: fadeIn 1s ease-in-out;
     }
+
     .container {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1.5rem;
       text-align: center;
     }
+
     .icon {
       display: inline-flex;
       width: 80px;
@@ -52,36 +53,49 @@
       justify-content: center;
       border-radius: 12px;
       margin-bottom: 1rem;
-      animation: popIn 0.8s ease forwards;
     }
+
     .description {
       font-size: 1.1rem;
       margin: 1rem 0 2rem;
       color: #374151;
-      animation: fadeIn 1s ease-in-out 0.2s;
     }
+
     .buttons {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1rem;
       margin-bottom: 2.5rem;
-      animation: fadeInUp 1s ease-in-out 0.3s;
     }
-    .buttons a {
-      padding: 0.75rem 1.6rem;
+
+    .buttons .btn {
+      flex: 1 1 140px;
+      max-width: 220px;
+      min-width: 120px;
+      padding: 0.75rem 1.2rem;
       background-color: var(--accent);
       color: white;
       font-weight: bold;
       border-radius: 8px;
       text-decoration: none;
+      text-align: center;
+      white-space: nowrap;
       transition: transform 0.2s ease, background 0.3s ease;
-      min-width: 220px;
     }
-    .buttons a:hover {
+
+    .buttons .btn:hover {
       background-color: #15803d;
       transform: translateY(-3px);
     }
+
+    @media (max-width: 500px) {
+      .buttons .contribute {
+        flex: 1 1 100%;
+        max-width: none;
+      }
+    }
+
     .back-home {
       display: inline-block;
       margin-top: 1rem;
@@ -89,27 +103,70 @@
       color: #1d4ed8;
       text-decoration: none;
     }
-    .back-home:hover {
+
+    .back-home:hover { text-decoration: underline; }
+
+    .sponsors {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .sponsors h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .sponsor-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .sponsor-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .sponsor-card h3 {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .sponsor-card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 0.6rem;
+    }
+
+    .sponsor-card a {
+      color: #1d4ed8;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .sponsor-card a:hover {
       text-decoration: underline;
     }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #6b7280;
       margin-top: 3rem;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes popIn {
-      0% { transform: scale(0.6); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
@@ -125,12 +182,29 @@
     </p>
 
     <div class="buttons">
-      <a href="https://chatgpt.com/g/g-6761a9fadb6c8191ac2fef40b7366525-speak-konkani" target="_blank">🙏 Try GPT Now</a>
-      <a href="https://wa.me/?text=Try%20Speak%20Konkani%20GPT%20here%3A%20https%3A%2F%2Fbhasha.superai.cool%2FSpeakKonkani.html" target="_blank">📤 Share GPT</a>
-      <a href="https://payments.cashfree.com/forms/supportbhashaai" target="_blank">❤️ Contribute Now</a>
+      <a href="https://chatgpt.com/g/g-6761a9fadb6c8191ac2fef40b7366525-speak-konkani" target="_blank" class="btn">🙏 Try GPT Now</a>
+      <a href="https://wa.me/?text=Try%20Speak%20Konkani%20GPT%20here%3A%20https%3A%2F%2Fbhasha.superai.cool%2FSpeakKonkani.html" target="_blank" class="btn">📤 Share GPT</a>
+      <a href="https://payments.cashfree.com/forms/supportbhashaai" target="_blank" class="btn contribute">❤️ Contribute Now</a>
     </div>
+
     <a href="index.html" class="back-home">← Back to Home</a>
   </div>
+
+  <section class="sponsors">
+    <h2>🌟 Our Supporters</h2>
+    <div class="sponsor-grid">
+      <div class="sponsor-card"><h3>KonkaniTech</h3><p>Advancing AI-powered Konkani learning tools.</p><a href="https://konkanitech.in" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Goa Language Lab</h3><p>Preserving Goan Konkani through technology.</p><a href="https://goalanguagelab.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>DesiGPT Collective</h3><p>Regional GPTs for India’s rich languages.</p><a href="https://desigpt.in" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>KonkaniVerse</h3><p>Showcasing Konkani culture via digital content.</p><a href="https://konkaniverse.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Unity Konkani AI</h3><p>Community-driven GPT tools for Konkani.</p><a href="https://unitykonkani.ai" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>AI Konkan</h3><p>Empowering coastal India through AI tools.</p><a href="https://aikonkan.in" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>Goa Code Club</h3><p>Tech learning initiatives in the Konkan belt.</p><a href="https://goacodeclub.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>KonkaniGPT Edu</h3><p>AI-powered tutorials for learning Konkani.</p><a href="https://konkanigptedu.in" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>SpeakKonkani.org</h3><p>Resources and community for speaking Konkani.</p><a href="https://speakkonkani.org" target="_blank">Visit Website →</a></div>
+      <div class="sponsor-card"><h3>BhashaRoots</h3><p>Preserving Indian languages using AI tools.</p><a href="https://bhasharoots.org" target="_blank">Visit Website →</a></div>
+    </div>
+  </section>
 
   <footer>
     Made with ❤️ and developed by Super AI Labs<br />

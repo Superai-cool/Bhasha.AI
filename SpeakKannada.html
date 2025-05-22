@@ -28,7 +28,6 @@
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.6rem;
-      animation: fadeIn 1s ease-in-out;
     }
     .container {
       max-width: 800px;
@@ -48,14 +47,12 @@
       justify-content: center;
       border-radius: 12px;
       margin-bottom: 1rem;
-      animation: popIn 0.8s ease forwards;
     }
     .description {
       font-size: 1.1rem;
       margin: 1rem 0 2rem;
       color: #374151;
     }
-
     .buttons {
       display: flex;
       flex-wrap: wrap;
@@ -87,7 +84,6 @@
         max-width: none;
       }
     }
-
     .back-home {
       display: inline-block;
       margin-top: 1rem;
@@ -151,9 +147,6 @@
       color: #6b7280;
       margin-top: 3rem;
     }
-
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes popIn { 0% { transform: scale(0.6); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
   </style>
 </head>
 <body>
@@ -178,7 +171,7 @@
 
   <section class="sponsors">
     <h2>🌟 Our Supporters</h2>
-    <div class="sponsor-grid">
+    <div class="sponsor-grid" id="sponsorGrid">
       <div class="sponsor-card"><h3>KarnatakaTech</h3><p>Driving tech awareness in Kannada-speaking regions.</p><a href="https://karnatakatech.in" target="_blank">Visit Website →</a></div>
       <div class="sponsor-card"><h3>Janapada Foundation</h3><p>Supporting cultural and language education initiatives.</p><a href="https://janapada.org" target="_blank">Visit Website →</a></div>
       <div class="sponsor-card"><h3>Namma AI Hub</h3><p>Empowering AI tools for local Indian language use.</p><a href="https://nammaaihub.in" target="_blank">Visit Website →</a></div>
@@ -196,5 +189,12 @@
     Made with ❤️ and developed by Super AI Labs<br />
     © 2025 Bhasha AI. Empowering Bharat with local language learning.
   </footer>
+
+  <script>
+    const grid = document.getElementById("sponsorGrid");
+    const cards = Array.from(grid.children);
+    const shuffled = cards.sort(() => 0.5 - Math.random());
+    shuffled.forEach(card => grid.appendChild(card));
+  </script>
 </body>
 </html>
